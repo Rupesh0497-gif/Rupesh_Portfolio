@@ -18,13 +18,13 @@ const Skills = () => {
     >
       <div className="app__skills-title">
         <h2 className="app__skills-title_title">Skills</h2>
-        {/* <p className="app__skills-title_content">
+        <p className="app__skills-title_content">
           I translate UI/UX design into successful responsive websites that are
           fast, easy to use, and built with best practices. The main area of my
           expertise is front-end development, HTML, CSS, JS, & React. As an
           aspirant frontend developer most of my skills are heavily focused on
           different frontend technologies.
-        </p> */}
+        </p>
 
         {/* <p className="app__skills-title_content">
           Despite knowing these frontend technologies I also have experience in
@@ -33,15 +33,8 @@ const Skills = () => {
         </p> */}
 
         <p className="app__skills-title_content">
-          As of this moment I'm currently learning best Devops principle and
-          Python such as{" "}
-          <a
-            href="https://www.python.org/"
-            target="_blank"
-            className="app__links"
-          >
-            Python
-          </a>
+          As of this moment I'm currently learning Devops and
+          Front-end System Design.
           <p>
             Soon enough I will earn my certification (Certified Kubernetes Application Developer) from Devops Institute. 
           </p>

@@ -63,7 +63,7 @@ As an AWS Developer Associate certified professional and a master’s student in
               FSU
             </a>
           </p>
-          <p>Expected graduation december 2025.</p>
+          <p>Expected Graduation December 2025.</p>
         </div>
         <div className="app__about-container_image">
           <img src={AboutSVG} alt="Programming" />
