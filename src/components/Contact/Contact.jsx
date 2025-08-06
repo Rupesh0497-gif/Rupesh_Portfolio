@@ -29,7 +29,7 @@ const Contact = () => {
           </p>
           <ul className="app__contact-container_contacts-links">
             <a
-              href="www.linkedin.com/in/rupesh-kumar-a94074116"
+              href="https://www.linkedin.com/in/rupesh-kumar-a94074116"
               target="blank"
             >
               <img src={LinkedIn} alt="" />
