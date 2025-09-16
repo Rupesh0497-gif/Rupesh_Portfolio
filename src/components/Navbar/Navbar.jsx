@@ -55,7 +55,7 @@ const Navbar = () => {
     <nav className="app__navbar">
       <div className="app__navbar-container">
         <div className="app__navbar-container_logo">
-          <p>Rupesh</p>
+          <p>Rupesh Kumar Bathina</p>
         </div>
         <ul className="app__navbar-container_navlinks">
           <Menu />

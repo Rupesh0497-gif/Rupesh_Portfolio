@@ -1,64 +1,37 @@
 import * as React from 'react';
-import {
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
-  Typography,
-  Grid,
-  Chip,
-  Box
-} from '@mui/material';
+import Accordion from '@mui/material/Accordion';
+import AccordionActions from '@mui/material/AccordionActions';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Button from '@mui/material/Button';
 
-export default function ProjectsCard({ projects }) {
+export default function AccordionUsage({ projects }) {
   return (
-    <Box sx={{ mt: 4 }}>
-      {projects.map((data, index) => (
-        <Accordion key={index} elevation={2} sx={{ borderRadius: 2 }}>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls={`panel${index}-content`}
-            id={`panel${index}-header`}
-          >
-            <Box>
-              <Typography variant="h6" fontWeight="bold">
-                {data.title}
-              </Typography>
-              <Typography variant="subtitle2" color="text.secondary">
-                {data.Role} • {data.duration}
-              </Typography>
-            </Box>
-          </AccordionSummary>
-
-          <AccordionDetails>
-            <Grid container spacing={3}>
-              <Grid item xs={12} md={4}>
-                <Box
-                  component="img"
-                  src={data.image}
-                  alt={data.title}
-                  sx={{ width: '100%', borderRadius: 2 }}
-                />
-              </Grid>
-
-              <Grid item xs={12} md={8}>
-                <Typography variant="body1" sx={{ mb: 2 }}>
-                  {data.text}
-                </Typography>
-
-                {/* Optional: Tech stack tags */}
-                {data.skills && (
-                  <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-                    {data.skills.map((skill, idx) => (
-                      <Chip key={idx} label={skill} color="primary" variant="outlined" />
-                    ))}
-                  </Box>
-                )}
-              </Grid>
-            </Grid>
-          </AccordionDetails>
-        </Accordion>
-      ))}
-    </Box>
+    <div>
+      {projects.map((data, index) => {
+        return (
+<Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1-content"
+          id="panel1-header"
+        >
+          <Typography component="span"><strong style={{fontSize: "25px"}}>{data.title} - {data.Role}</strong></Typography> 
+          
+        </AccordionSummary>
+        <AccordionDetails>
+        <Typography component="span"><strong style={{fontSize: "20px"}}> Tenure : {data.duration}</strong></Typography>
+        <div>
+          <img src={data.image} alt={data.title} />
+        </div>
+         <div style={{marginTop: '15px'}}>{data.text}</div>
+        </AccordionDetails>
+      </Accordion>  
+        )
+      })
+    }  
+    </div>
   );
 }

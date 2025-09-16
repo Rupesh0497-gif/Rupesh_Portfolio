@@ -5,7 +5,7 @@ import ProjectDetails, {
 } from "./imports";
 import "./Projects.scss";
 import ProjectsCard from "./ProjectsCard";
-
+import ProjectsContainer from './ProjectsContainer'
 const Projects = () => {
   const certificates = [AWSCertificate];
 
@@ -26,7 +26,13 @@ const Projects = () => {
             <ProjectsCard key={""} projects={ProjectDetails} />
         </div>
         <div className="app__projects-container_certificate">
-          <h2>Certificates</h2>
+          <h2>Projects</h2>
+          <div className="app__projects-container_certificate-cert">
+            <ProjectsContainer />
+          </div>
+        </div>
+        <div className="app__projects-container_certificate">
+          <h2>Certificate</h2>
           <div className="app__projects-container_certificate-cert">
             {certificates.map((certificate, index) => (
               <CertificateCard key={index} cert={certificate} />
