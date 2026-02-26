@@ -1,18 +1,16 @@
 import React from "react";
 import Connection from "../../assets/images/connections.svg";
-import Facebook from "../../assets/images/socials/facebook.png";
-import Instagram from "../../assets/images/socials/instagram.png";
 import LinkedIn from "../../assets/images/socials/linkedin.png";
 import "./Contact.scss";
 
 const Contact = () => {
   return (
     <section
-      className="app__contact"
+      className="app__contact section-padding"
       id="contacts"
-      data-aos="fade"
+      data-aos="fade-up"
       data-aos-offset="100"
-      data-aos-delay="500"
+      data-aos-delay="200"
       data-aos-duration="1000"
       data-aos-easing="ease"
       data-aos-once="true"
@@ -22,23 +20,23 @@ const Contact = () => {
           <p className="app__contact-container_contacts-touch">
             - Get in Touch
           </p>
-          <h2>Let's create progress together</h2>
+          <h2>Let's build progress together</h2>
           <p>
-            For all inquiries, you can contact and message me on any of the
-            specified social medias below.
+            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions. Feel free to connect!
           </p>
           <ul className="app__contact-container_contacts-links">
             <a
-              href="www.linkedin.com/in/rupesh-kumar-a94074116"
-              target="blank"
+              href="https://www.linkedin.com/in/rupesh-kumar-a94074116"
+              target="_blank"
+              rel="noreferrer"
             >
-              <img src={LinkedIn} alt="" />
-              Rupesh Kumar Bathina
+              <img src={LinkedIn} alt="LinkedIn Logo" />
+              <span>Rupesh Kumar Bathina</span>
             </a>
           </ul>
         </div>
         <div className="app__contact-container_image">
-          <img src={Connection} alt="Cennections" />
+          <img src={Connection} alt="Connections illustration" />
         </div>
       </div>
     </section>

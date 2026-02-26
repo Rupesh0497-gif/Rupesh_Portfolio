@@ -1,28 +1,56 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 
 :root {
-  --gradient-text: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
-  --gradient-orange: linear-gradient(#ff9883, #fff6a1);
-  --color-main: #151b54;
-  --color-primary: #342d7e;
-  --color-secondary: #4e5180;
+  --bg-color: #0a0b10;
+  --bg-color-alt: #12141d;
+  --bg-card: rgba(255, 255, 255, 0.03);
+  --bg-blur: 16px;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a4b8;
+  --text-muted: #6b7280;
+  --accent-neon-blue: #00B8D4;
+  /* Cyan/Teal */
+  --accent-magenta: #C6FF00;
+  /* Vibrant Lime */
+  --accent-purple: #00E676;
+  /* Glowing Emerald Green */
+  --gradient-neon: linear-gradient(90deg, var(--accent-neon-blue), var(--accent-purple), var(--accent-magenta));
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-border-highlight: rgba(255, 255, 255, 0.2);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --shadow-neon: 0 0 20px rgba(0, 230, 118, 0.3);
 }
 
 .app__gradient-text {
-  background: var(--gradient-text);
+  background: var(--gradient-neon);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
-.app__gradient-orange {
-  background: var(--gradient-orange);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.app__glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(var(--bg-blur));
+  -webkit-backdrop-filter: blur(var(--bg-blur));
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  box-shadow: var(--glass-shadow);
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.app__glass-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--glass-border-highlight);
 }
 
 .app__links {
   text-decoration: underline;
-  color: blue;
+  color: var(--accent-neon-blue);
+  transition: 0.3s ease;
+
+  &:hover {
+    color: var(--accent-magenta);
+    text-shadow: var(--shadow-neon);
+  }
 }

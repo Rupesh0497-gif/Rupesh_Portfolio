@@ -7,69 +7,41 @@ import SkillsCard from "./SkillsCard";
 const Skills = () => {
   return (
     <section
-      className="app__skills"
+      className="app__skills section-padding"
       id="skills"
-      data-aos="fade-left"
-      data-aos-offset="200"
-      data-aos-delay="400"
-      data-aos-duration="1000"
-      data-aos-easing="ease"
-      data-aos-once="true"
     >
-      <div className="app__skills-title">
-        <h2 className="app__skills-title_title">Skills</h2>
-        {/* <p className="app__skills-title_content">
-          I translate UI/UX design into successful responsive websites that are
-          fast, easy to use, and built with best practices. The main area of my
-          expertise is front-end development, HTML, CSS, JS, & React. As an
-          aspirant frontend developer most of my skills are heavily focused on
-          different frontend technologies.
-        </p> */}
-
-        {/* <p className="app__skills-title_content">
-          Despite knowing these frontend technologies I also have experience in
-          server side languanges such as PHP and MYSQL and basic knowledge in
-          Python and Java.
-        </p> */}
-
+      <div className="app__skills-title" data-aos="fade-up" data-aos-duration="800">
+        <h2 className="app__skills-title_title">Skills & Technologies</h2>
         <p className="app__skills-title_content">
-          As of this moment I'm currently learning best Devops principle and
-          Python such as{" "}
+          Currently expanding my expertise in DevOps principles and advanced backend engineering, including hands-on experience with {" "}
           <a
             href="https://www.python.org/"
             target="_blank"
+            rel="noreferrer"
             className="app__links"
           >
             Python
           </a>
-          <p>
-            Soon enough I will earn my certification (Certified Kubernetes Application Developer) from Devops Institute. 
-          </p>
+          .
         </p>
-
         <p className="app__skills-title_content">
-          These are the Tech Stack Tools I use as a developer in designing,
-          creating and establishing development projects.
+          Working towards earning my Certified Kubernetes Application Developer (CKAD) certification from DevOps Institute.
+        </p>
+        <p className="app__skills-title_content">
+          Here is a collection of the primary tech stack and tools I leverage to architect, design, and develop scalable digital solutions.
         </p>
       </div>
 
       <div className="app__skills-container">
-        <div
-          className="app__skills-container_skills"
-          data-aos="zoom-out"
-          data-aos-offset="300"
-          data-aos-delay="700"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-          data-aos-once="true"
-        >
+        <div className="app__skills-container_skills">
           {skills.map((skill, index) => (
-            <SkillsCard key={index} skill={skill} />
+            <SkillsCard key={index} skill={skill} index={index} />
           ))}
         </div>
-      </div>
-      <div className="app__skills-container_image multidevice">
-        <img src={MultiDevice} alt="MultiDevice" />
+
+        <div className="app__skills-container_image" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+          <img src={MultiDevice} alt="MultiDevice display showcasing responsive design" />
+        </div>
       </div>
     </section>
   );

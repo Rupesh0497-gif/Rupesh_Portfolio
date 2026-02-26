@@ -1,44 +1,80 @@
 .app__projects {
-  padding: 4rem 0;
-  background-color: #ffffff;
-  background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+  position: relative;
+  overflow: hidden;
+
+  /* Abstract glowing shapes */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -10%;
+    width: 40vw;
+    height: 40vw;
+    background: radial-gradient(circle, rgba(0, 230, 118, 0.1) 0%, rgba(10, 11, 16, 0) 70%);
+    z-index: 0;
+  }
 
   &-container {
-    width: 80%;
+    max-width: 1200px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 
-    > h2 {
-      font-size: 3.75rem;
+    >h2 {
+      font-size: 3.5rem;
       font-weight: 800;
-      margin-bottom: 2rem;
+      color: var(--text-primary);
+      margin-bottom: 3rem;
       text-align: center;
+      position: relative;
+      display: inline-block;
+      left: 50%;
+      transform: translateX(-50%);
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 4px;
+        background: var(--gradient-neon);
+        border-radius: 2px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 2.8rem;
+      }
     }
 
     &_projects {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
+      flex-direction: column;
       gap: 2rem;
+      margin-bottom: 5rem;
 
-      > .card {
-        transition: all 500ms ease;
-        max-width: 350px;
-        min-height: 350px;
+      /* MUI Accordion overrides for dark theme */
+      .MuiAccordion-root {
+        background: var(--bg-card);
+        backdrop-filter: blur(var(--bg-blur));
+        border: 1px solid var(--glass-border);
+        border-radius: 20px !important;
+        color: var(--text-primary);
+        box-shadow: var(--glass-shadow);
+        transition: transform 0.3s ease, border-color 0.3s ease;
+        overflow: hidden;
 
-        @media (min-width: 992px) {
-          &:hover {
-            transform: scale(105%);
-          }
+        &::before {
+          display: none;
         }
 
-        img {
-          width: 100%;
-          object-position: 100% 0%;
+        &:hover {
+          border-color: var(--glass-border-highlight);
         }
 
-        > .card-button {
-          padding: 1.25rem;
+        .MuiAccordionSummary-expandIconWrapper {
+          color: var(--accent-neon-blue);
         }
       }
     }
@@ -46,11 +82,28 @@
     &_certificate {
       margin-top: 5rem;
 
-      > h2 {
-        font-size: 3.75rem;
+      >h2 {
+        font-size: 3.5rem;
         font-weight: 800;
-        margin-bottom: 2rem;
+        color: var(--text-primary);
+        margin-bottom: 3rem;
         text-align: center;
+        position: relative;
+        display: inline-block;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -10px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 60%;
+          height: 4px;
+          background: var(--gradient-neon);
+          border-radius: 2px;
+        }
 
         @media (max-width: 500px) {
           font-size: 2.75rem;
@@ -61,54 +114,33 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
+        align-items: stretch;
         gap: 2rem;
 
-        > .card__modal {
-          position: fixed;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background-color: rgba(0, 0, 0, 0.4);
-          z-index: 9;
-
-          .cert-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            width: 100%;
-
-            img {
-              width: 80%;
-              height: 90%;
-
-              @media (max-width: 600px) {
-                object-fit: contain;
-              }
-            }
-          }
-        }
-
-        > .card__certificate {
-          max-width: 350px;
-          min-height: 300px;
-          border-radius: 0.25rem;
+        >.card__certificate {
+          max-width: 400px;
+          border-radius: 20px;
           padding: 1rem;
-          background-color: white;
-          transition: all 500ms ease;
+          background: var(--bg-card);
+          backdrop-filter: blur(var(--bg-blur));
+          border: 1px solid var(--glass-border);
+          box-shadow: var(--glass-shadow);
+          transition: all 0.3s ease;
 
           @media (min-width: 992px) {
             cursor: pointer;
+
             &:hover {
-              transform: scale(105%);
+              transform: translateY(-10px);
+              box-shadow: var(--shadow-neon);
+              border-color: var(--accent-neon-blue);
             }
           }
 
           img {
             width: 100%;
-            min-height: 275px;
+            height: auto;
+            border-radius: 12px;
           }
         }
       }

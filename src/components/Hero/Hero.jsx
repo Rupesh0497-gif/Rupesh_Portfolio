@@ -11,11 +11,10 @@ const Hero = () => {
       id="home"
       data-aos="fade"
       data-aos-offset="200"
-      data-aos-delay="500"
+      data-aos-delay="200"
       data-aos-duration="1000"
       data-aos-easing="ease"
       data-aos-once="true"
-      data-aos-anchor-placement="top-center"
     >
       <div className="app__hero-container">
         <div className="app__hero-container_text">
@@ -24,32 +23,33 @@ const Hero = () => {
             sequence={["Hi, my name is"]}
             wrapper="p"
             repeat={1}
-            className="app__hero-title "
+            className="app__hero-title"
           />
           <TypeAnimation
             cursor={false}
-            sequence={[2000, "Rupesh Kumar Bathina"]}
+            sequence={[1000, "Rupesh Kumar."]}
             wrapper="h1"
             repeat={1}
-            className="app__hero-container_text-name"
+            className="app__hero-container_text-name app__gradient-text"
           />
 
           <TypeAnimation
             cursor={false}
-            sequence={[3000, "I enjoy learning and collaboration"]}
+            sequence={[2000, "I craft digital experiences."]}
             wrapper="h2"
             repeat={1}
             className="app__hero-container_text-title"
           />
           <TypeAnimation
-            cursor={false}
+            cursor={true}
             sequence={[
-              5000,
+              3000,
               "I am a MERN Full Stack Developer",
-              500,
-              "I enjoy creating scalable system",
               1000,
-              "Let's learn from each other.",
+              "I enjoy creating scalable systems",
+              1000,
+              "Let's build something amazing together.",
+              2000,
             ]}
             wrapper="h3"
             repeat={Infinity}
@@ -57,7 +57,9 @@ const Hero = () => {
           />
         </div>
         <div className="app__hero-container_image">
-          <img src={HeroSvg} alt="" />
+          <div className="image-wrapper">
+            <img src={HeroSvg} alt="Rupesh" />
+          </div>
         </div>
       </div>
     </main>

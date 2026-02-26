@@ -2,8 +2,6 @@ import React from "react";
 import HeroSvg from "../../assets/images/MealSharingWebApp.png";
 import Streamlit from "../../assets/images/streamlitApp.png";
 
-
-
 const projects = [
   {
     title: "Meal Sharing Web App",
@@ -18,14 +16,25 @@ const projects = [
 ];
 
 const ProjectCard = ({ title, image, github }) => (
-  <div className="bg-white shadow-md rounded-2xl p-4 flex flex-col items-center w-80" style={{marginRight: '30px'}}>
-    <img src={image} alt={title} className="h-40 object-contain mb-4" width={"300"} height={"300"}/>
-    <h3 className="text-lg font-semibold text-center mb-2">{title}</h3>
+  <div className="app__glass-card" style={{ padding: '2rem', display: 'flex', flexDirection: 'column', alignItems: 'center', width: '320px' }}>
+    <img src={image} alt={title} style={{ height: '160px', objectFit: 'contain', marginBottom: '1.5rem', borderRadius: '12px' }} />
+    <h3 style={{ fontSize: '1.25rem', fontWeight: '600', textAlign: 'center', marginBottom: '1.5rem', color: 'var(--text-primary)' }}>{title}</h3>
     <a
       href={github}
       target="_blank"
       rel="noopener noreferrer"
-      className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+      style={{
+        background: 'var(--gradient-neon)',
+        color: '#fff',
+        padding: '0.8rem 1.5rem',
+        borderRadius: '8px',
+        fontWeight: '600',
+        transition: 'opacity 0.3s ease',
+        width: '100%',
+        textAlign: 'center'
+      }}
+      onMouseOver={(e) => e.currentTarget.style.opacity = '0.8'}
+      onMouseOut={(e) => e.currentTarget.style.opacity = '1'}
     >
       View on GitHub
     </a>
@@ -33,13 +42,11 @@ const ProjectCard = ({ title, image, github }) => (
 );
 
 const ProjectsContainer = () => (
-  <section className="py-10">
-    <div className=" justify-center gap-8" style={{display: 'flex'}}>
-      {projects.map((project, idx) => (
-        <ProjectCard key={idx} {...project} />
-      ))}
-    </div>
-  </section>
+  <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', flexWrap: 'wrap', width: '100%' }}>
+    {projects.map((project, idx) => (
+      <ProjectCard key={idx} {...project} />
+    ))}
+  </div>
 );
 
 export default ProjectsContainer;
