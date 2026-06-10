@@ -33,28 +33,13 @@ const Hero = () => {
             className="app__hero-container_text-name app__gradient-text"
           />
 
-          <TypeAnimation
-            cursor={false}
-            sequence={[2000, "I craft digital experiences."]}
-            wrapper="h2"
-            repeat={1}
-            className="app__hero-container_text-title"
-          />
-          <TypeAnimation
-            cursor={true}
-            sequence={[
-              3000,
-              "I am a MERN Full Stack Developer",
-              1000,
-              "I enjoy creating scalable systems",
-              1000,
-              "Let's build something amazing together.",
-              2000,
-            ]}
-            wrapper="h3"
-            repeat={Infinity}
-            className="app__hero-container_text-subtitle"
-          />
+          {/* 1. Static or pre-typed Title to prevent concurrent layout fights */}
+      <h2 className="app__hero-container_text-title">
+        I craft digital experiences.
+      </h2>
+      <p style={{fontSize: 20}}>I am Software Engineer with a passion for building innovative and efficient software solutions.</p>
+      <p style={{fontSize: 20}}>I enjoy creating scalable systems and writing clean, maintainable code.</p>
+      <p style={{fontSize: 20}}>Let's build something amazing together. Feel free to explore my portfolio and get in touch!</p>
         </div>
         <div className="app__hero-container_image">
           <div className="image-wrapper">

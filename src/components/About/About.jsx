@@ -18,15 +18,11 @@ const About = () => {
         <div className="app__about-container_text">
           <h2>About Me</h2>
           <p>
-            Hi, I’m Rupesh Kumar Bathina, a MERN Full Stack Developer with 4.5 years of experience delivering scalable and efficient applications. At Verizon, I streamlined workflows for projects like SNAP, improving efficiency for 50+ team members. At Cognizant, I revamped interfaces and optimized performance for Walgreens, driving impactful results.
-          </p>
-          <p>
-            As an AWS Developer Associate certified professional and a master’s student in Information Technology, I am passionate about leveraging cloud technologies and full-stack development to solve challenges and deliver excellence.
-          </p>
-          <p>
-            I spend my time learning new technology especially Frontend
-            Development and DevOps. I consistently learn the concepts and tools behind them and
-            build projects around them.
+            Hi, I'm Rupesh Kumar Bathina, a Software Engineer with 4+ years of experience building scalable backend systems, cloud-native applications, and full-stack solutions. I specialize in Java, Spring Boot, AWS, React, and distributed microservices, with experience across government, telecommunications, and retail domains. </p>
+<p>
+Currently, I develop mission-critical applications for the State of Florida, helping support disability services for over 70,000 beneficiaries through automated eligibility, onboarding, and provider management platforms. Throughout my career, I've designed REST APIs, event-driven systems, cloud-based architectures, and high-performance applications that improve operational efficiency and deliver measurable business impact.
+
+I enjoy solving complex engineering challenges, designing reliable systems, and building technology that makes a meaningful difference for users. Whether it's modernizing legacy platforms, optimizing backend performance, or developing cloud-native solutions, I'm passionate about creating software that is scalable, maintainable, and impactful.
           </p>
 
           <p>

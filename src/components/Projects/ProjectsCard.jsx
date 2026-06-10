@@ -23,11 +23,13 @@ export default function AccordionUsage({ projects }) {
               <div style={{ fontSize: "1rem", fontWeight: "500", color: 'var(--accent-neon-blue)', marginBottom: '1rem' }}>
                 Tenure: {data.duration}
               </div>
-              <div style={{ marginBottom: '1rem', width: '100%', overflow: 'hidden', borderRadius: '12px' }}>
-                <img src={data.image} alt={data.title} style={{ width: '100%', objectFit: 'cover' }} />
+              <div style={{display: 'flex'}}>
+              <div style={{ margin: '1rem', width: '300px', borderRadius: '12px' }}>
+                <img src={data.image} alt={data.title} style={{ width: '300px', height: '200px', objectFit: 'cover', borderRadius: '100px'}} />
               </div>
-              <div style={{ marginTop: '15px', color: 'var(--text-secondary)', lineHeight: '1.6' }}>
+              <div style={{ marginTop: '10px', color: 'var(--text-secondary)', lineHeight: '1.6' }}>
                 {data.text}
+              </div>
               </div>
             </AccordionDetails>
           </Accordion>
